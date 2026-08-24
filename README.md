@@ -18,34 +18,34 @@ analytical Black--Scholes formula.
 
 ## Mathematical model
 
-Under the risk-neutral probability measure \(\mathbb{Q}\), a
+Under the risk-neutral probability measure $\mathbb{Q}$, a
 non-dividend-paying stock follows
 
 $$
 dS_t = rS_t\,dt + \sigma S_t\,dW_t,
 $$
 
-where \(r\) is the continuously compounded risk-free rate, \(\sigma\) is the
-volatility, and \(W_t\) is a Brownian motion. The exact terminal solution is
+where $r$ is the continuously compounded risk-free rate, $\sigma$ is the
+volatility, and $W_t$ is a Brownian motion. The exact terminal solution is
 
 $$
 S_T = S_0\exp\left[\left(r-\frac{1}{2}\sigma^2\right)T
  \sigma\sqrt{T}Z\right], \qquad Z\sim N(0,1).
 $$
 
-For a payoff \(H(S_T)\), the no-arbitrage price is
+For a payoff $H(S_T)$, the no-arbitrage price is
 
 $$
 V_0 = e^{-rT}\mathbb{E}^{\mathbb{Q}}[H(S_T)].
 $$
 
-The Monte Carlo estimator based on \(N\) independent samples is
+The Monte Carlo estimator based on $N$ independent samples is
 
 $$
 \widehat V_N = e^{-rT}\frac{1}{N}\sum_{i=1}^{N}H(S_T^{(i)}).
 $$
 
-Its standard error decreases at rate \(N^{-1/2}\). This is why reducing error
+Its standard error decreases at rate $N^{-1/2}$. This is why reducing error
 by a factor of ten requires approximately one hundred times as many
 simulations.
 
@@ -55,11 +55,11 @@ The reproducible experiment uses:
 
 | Parameter | Value |
 | --- | ---: |
-| Initial stock price \(S_0\) | 100 |
-| Strike price \(K\) | 100 |
-| Maturity \(T\) | 1 year |
-| Risk-free rate \(r\) | 5% |
-| Volatility \(\sigma\) | 20% |
+| Initial stock price $S_0$ | 100 |
+| Strike price $K$ | 100 |
+| Maturity $T$ | 1 year |
+| Risk-free rate $r$ | 5% |
+| Volatility $\sigma$ | 20% |
 
 With these parameters, the analytical Black--Scholes prices are approximately
 **10.4506** for the call and **5.5735** for the put.
@@ -139,9 +139,9 @@ The experiment script regenerates the CSV file and every figure under
 - A 95% confidence interval makes the estimator's sampling uncertainty
   explicit; a single point estimate alone can be misleading.
 - Empirical root mean squared error follows the theoretical
-  \(N^{-1/2}\) reference rate.
+  $N^{-1/2}$ reference rate.
 - Full paths are useful for visualization, but a European option depends only
-  on \(S_T\), so direct terminal-price simulation is faster and exact under GBM.
+  on $S_T$, so direct terminal-price simulation is faster and exact under GBM.
 
 ## Assumptions and limitations
 
