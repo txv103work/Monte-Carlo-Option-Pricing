@@ -13,7 +13,7 @@ analytical Black--Scholes formula.
   intervals.
 - Compare numerical estimates with Black--Scholes analytical prices.
 - Examine the theoretical Monte Carlo convergence rate
-  \(\mathcal{O}(N^{-1/2})\).
+  $\mathcal{O}(N^{-1/2})$.
 - Demonstrate antithetic variates as a simple variance-reduction method.
 
 ## Mathematical model
