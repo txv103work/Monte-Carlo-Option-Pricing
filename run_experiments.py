@@ -10,7 +10,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from src.option_pricing import (  # noqa: E402
+from option_pricing import (  # noqa: E402
     OptionParameters,
     black_scholes_price,
     monte_carlo_price,
