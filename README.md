@@ -8,6 +8,7 @@ analytical Black--Scholes formula.
 ## Project objectives
 
 - Simulate stock prices under the risk-neutral GBM model.
+- Mô phỏng giá của cô phiếu dưới mô hình GBM trung hòa rủi ro.
 - Estimate European call and put prices by Monte Carlo simulation.
 - Quantify sampling uncertainty with standard errors and 95% confidence
   intervals.
